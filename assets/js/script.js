@@ -1,6 +1,7 @@
 var date = dayjs();
 $('#displayDate').text(date.format('DD/MM/YYYY'));
 
+// array for the data that goes into the div templates
 var scheduleData = [
 {
   hour: "9AM",

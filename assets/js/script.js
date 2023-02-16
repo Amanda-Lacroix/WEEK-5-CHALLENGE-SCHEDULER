@@ -1,10 +1,65 @@
 var date = dayjs();
 $('#displayDate').text(date.format('DD/MM/YYYY'));
 
+var scheduleData = [
+{
+  hour: "9AM",
+  text: "user input will go here"
+},
+{
+  hour: "10AM",
+  text: "user input will go here"
+},
+{
+  hour: "11AM",
+  text: "user input will go here"
+},
+{
+  hour: "12PM",
+  text: "user input will go here"
+},
+{
+  hour: "1PM",
+  text: "user input will go here"
+},
+{
+  hour: "2PM",
+  text: "user input will go here"
+},
+{
+  hour: "3PM",
+  text: "user input will go here"
+},
+{
+  hour: "4PM",
+  text: "user input will go here"
+},
+{
+  hour: "5PM",
+  text: "user input will go here"
+}
+]
 
+function generateScheduleDiv(){
+  var scheduleRow = ""
 
+  for(var i=0; 1 <scheduleData.length; i++){
+    var currentScheduleDiv = scheduleData[i]
+    scheduleRow +='<div id="hour" class="row time-block past"><div class="col-2 col-md-1 hour text-center py-3">' +
+    currentScheduleDiv.hour;
+   ' </div><textarea class="col-8 col-md-10 description" rows="3">' +
+    currentScheduleDiv.text;
+    '</textarea></div>'
 
-$(function () {
+  }
+
+  $("#timeOfDay").html(scheduleRow);
+
+}
+
+generateScheduleDiv();
+
+// $(function () {
 
 
   // TODO: Add a listener for click events on the save button. This code should
@@ -25,4 +80,4 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
+// });

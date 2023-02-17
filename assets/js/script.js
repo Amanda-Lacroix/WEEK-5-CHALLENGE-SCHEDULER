@@ -41,6 +41,7 @@ var scheduleData = [
 }
 ]
 
+// loops through and creates divs in the html to hold the data
 function generateScheduleDiv(){
   var scheduleRow = ""
 

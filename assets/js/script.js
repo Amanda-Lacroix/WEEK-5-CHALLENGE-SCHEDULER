@@ -47,11 +47,11 @@ function generateScheduleDiv(){
 
   for(var i=0; 1 <scheduleData.length; i++){
     var currentScheduleDiv = scheduleData[i]
-    scheduleRow +='<div id="hour" class="row time-block past"><div class="col-2 col-md-1 hour text-center py-3">' +
-    currentScheduleDiv.hour;
-   ' </div><textarea class="col-8 col-md-10 description" rows="3">' +
-    currentScheduleDiv.text;
-    '</textarea></div>'
+    scheduleRow +=`<div id="hour" class="row time-block past"><div class="col-2 col-md-1 hour text-center py-3">'
+    ${ currentScheduleDiv.hour};
+   </div><textarea class="col-8 col-md-10 description" rows="3">
+    ${currentScheduleDiv.text};
+    </textarea></div>`
 
   }
 

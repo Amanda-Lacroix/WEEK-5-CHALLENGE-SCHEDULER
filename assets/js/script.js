@@ -6,39 +6,39 @@ $('#displayDate').text(date.format('DD/MM/YYYY'));
 var scheduleData = [
 {
   hour: "9AM",
-  text: "user input will go here"
+  text: ""
 },
 {
   hour: "10AM",
-  text: "user input will go here"
+  text: ""
 },
 {
   hour: "11AM",
-  text: "user input will go here"
+  text: ""
 },
 {
   hour: "12PM",
-  text: "user input will go here"
+  text: ""
 },
 {
   hour: "1PM",
-  text: "user input will go here"
+  text: ""
 },
 {
   hour: "2PM",
-  text: "user input will go here"
+  text: ""
 },
 {
   hour: "3PM",
-  text: "user input will go here"
+  text: ""
 },
 {
   hour: "4PM",
-  text: "user input will go here"
+  text: ""
 },
 {
   hour: "5PM",
-  text: "user input will go here"
+  text: ""
 }
 ]
 
@@ -48,11 +48,13 @@ function generateScheduleDiv(){
 
   for(var i=0; i < scheduleData.length; i++){
     var currentScheduleDiv = scheduleData[i]
-    scheduleRow +=`<div id="hour" class="row time-block past"><div class="col-2 col-md-1 hour text-center py-3">
-    ${ currentScheduleDiv.hour};
-   </div><textarea class="col-8 col-md-10 description" rows="3">
-    ${currentScheduleDiv.text};
-    </textarea></div>`
+    scheduleRow += `  <div id="timeOfDay" class="row time-block past">
+    <div class="col-2 col-md-1 hour text-center py-3">${ currentScheduleDiv.hour}</div>
+    <textarea class="col-8 col-md-10 description" rows="3">${currentScheduleDiv.text} </textarea>
+    <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+      <i class="fas fa-save" aria-hidden="true"></i>
+    </button>
+  </div>`
 
   }
 

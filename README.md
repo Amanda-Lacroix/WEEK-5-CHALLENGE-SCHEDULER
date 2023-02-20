@@ -12,7 +12,7 @@ Open your favourite web browser and follow the link: https://amanda-lacroix.gith
 ## Screenshot
 
 Screenshot of the demo webpage to verify against the live website as noted above:
-![Events get edited and colours change dynamically.](./Assets/05-third-party-apis-homework-demo.gif)
+![Events get edited and colours change dynamically.](./assets/05-third-party-apis-homework-demo.gif)
 
 
 ## Credits

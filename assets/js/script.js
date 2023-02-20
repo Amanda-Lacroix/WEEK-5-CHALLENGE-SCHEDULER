@@ -1,7 +1,8 @@
+// Displays date at top of the page
 var date = dayjs();
 $('#displayDate').text(date.format('DD/MM/YYYY'));
 
-// array for the data that goes into the div templates
+// Array for the data that goes into the div templates
 var scheduleData = [
 {
   hour: "9AM",
@@ -41,13 +42,13 @@ var scheduleData = [
 }
 ]
 
-// loops through and creates divs in the html to hold the data
+// loops through and creates divs in the html to hold the data (NOT WORKING!!)
 function generateScheduleDiv(){
   var scheduleRow = ""
 
-  for(var i=0; 1 <scheduleData.length; i++){
+  for(var i=0; i < scheduleData.length; i++){
     var currentScheduleDiv = scheduleData[i]
-    scheduleRow +=`<div id="hour" class="row time-block past"><div class="col-2 col-md-1 hour text-center py-3">'
+    scheduleRow +=`<div id="hour" class="row time-block past"><div class="col-2 col-md-1 hour text-center py-3">
     ${ currentScheduleDiv.hour};
    </div><textarea class="col-8 col-md-10 description" rows="3">
     ${currentScheduleDiv.text};
